@@ -1,3 +1,53 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Chakra Petch', sans-serif;
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: blanchedalmond;
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-image: url("./assets/abstract-dark-background-with-flowing-colouful-waves.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#logo {
+    background: radial-gradient(circle, rgba(63,94,251,0.5) 4%, rgba(171,49,74,0.5) 80%);    
+    text-align: center;
+    font-size: 4rem;
+    width: 100%;
+    margin-top: 5rem;
+    color: white;
+}
+
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    background: radial-gradient(circle, rgba(63,94,251,0.5) 4%, rgba(171,49,74,0.5) 80%);
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+a {
+    text-decoration: none;
 }
