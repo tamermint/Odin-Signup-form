@@ -31,7 +31,36 @@ body::before {
     font-size: 4rem;
     width: 100%;
     margin-top: 5rem;
-    color: white;
+    color:#64d86b; 
+}
+
+#about {
+    background: radial-gradient(circle, rgba(63,94,251,0.5) 4%, rgba(171,49,74,0.5) 80%);    
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 5rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    padding: 3rem;
+    color:#64d86b;
+}
+
+#user-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 2rem;
+}
+
+button {
+    font-size: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 20px;
+    background-color: transparent;
+    color:#64d86b;
+    border: 1px solid #64d86b;
 }
 
 footer {
@@ -43,11 +72,11 @@ footer {
     background: radial-gradient(circle, rgba(63,94,251,0.5) 4%, rgba(171,49,74,0.5) 80%);
 }
 
-a:visited {
+#bground-img-credits:visited {
     text-decoration: none;
     color: white;
 }
 
-a {
+#bground-img-credits {
     text-decoration: none;
 }
