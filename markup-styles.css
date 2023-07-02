@@ -32,6 +32,7 @@ body::before {
     width: 100%;
     margin-top: 5rem;
     color:#64d86b; 
+    box-shadow: 2px 1px 5px 8px hsla(124, 60%, 62%, 0.7);
 }
 
 #about {
@@ -43,6 +44,8 @@ body::before {
     margin-right: 4rem;
     padding: 3rem;
     color:#64d86b;
+    box-shadow: 2px 1px 5px 8px hsla(124, 60%, 62%, 0.7);
+    border-radius: 20px;
 }
 
 #user-options {
@@ -61,6 +64,20 @@ button {
     background-color: transparent;
     color:#64d86b;
     border: 1px solid #64d86b;
+    box-shadow: 1px -1.5px 10px 2px hsla(124, 60%, 62%, 0.7);
+}
+
+#form-container {
+    margin: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+#form-intro {
+    color: #64d86b;
+    font-size: 1.5rem;
+    text-align: center;
+    
 }
 
 footer {
