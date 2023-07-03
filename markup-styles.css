@@ -68,29 +68,57 @@ button {
 }
 
 #form-container {
+    display: flex;
+    flex-direction: column;
     margin: 4rem;
     padding-left: 2rem;
     padding-right: 2rem;
+    box-shadow: 2px 1px 5px 8px hsla(124, 60%, 62%, 0.7);
+    border-radius: 50px;
+    background: radial-gradient(circle, rgba(63,94,251,0.5) 4%, rgba(171,49,74,0.5) 80%);
 }
 
 #form-intro {
     color: #64d86b;
     font-size: 1.5rem;
     text-align: center;
+    margin: 1.5rem;
+}
+
+#odin-form {
+    color: #64d86b;
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    font-size: 1.5rem;
+}
+
+input {
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 50px;
+    width: max-content;
+}
+
+#left-form-col, #right-form-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem;
 }
 
 footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    position: fixed;
+    position: relative;
     text-align: center;
-    background: radial-gradient(circle, rgba(63,94,251,0.5) 4%, rgba(171,49,74,0.5) 80%);
+    background: radial-gradient(circle, rgba(63,94,251,0.2) 4%, rgba(171,49,74,0.2) 80%);
 }
 
 #bground-img-credits:visited {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 #bground-img-credits {

@@ -24,8 +24,27 @@
     </div>
     <div id="form-container">
         <div id="form-intro">Welcome, you have made a bold choice. Enter your details to get started</div>
-        <form method="post">
-
+        <form id="odin-form" method="post">
+            <div id="left-form-col">
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name">
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name">
+                <label for="age">Age:</label>
+                <input type="text" id="lage" name="age">
+                <label for="alias">Multiverse alias:</label>
+                <input type="text" id="alias" name="alias">
+            </div>
+            <div id="right-form-col">
+                <label for="uplink">Uplink:</label>
+                <input type="number" id="uplink" name="uplink" placeholder="Your sat phone">
+                <label for="downlink">Downlink:</label>
+                <input type="email" id="downlink" name="downlink" placeholder="your interdimensional email">
+                <label for="pass">Password:</label>
+                <input type="password" id="pass" name="pass">
+                <label for="pass_try">Re-enter Password:</label>
+                <input type="password" id="pass_try" name="pass_try">
+            </div>
         </form>
     </div>
     <footer>
