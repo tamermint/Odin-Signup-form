@@ -93,17 +93,30 @@ button {
     font-size: 1.5rem;
 }
 
+
 input {
     padding: 10px;
     background-color: transparent;
     border-radius: 50px;
-    width: max-content;
+    width: 500px;
+    color: #64d86b;
+}
+
+input::placeholder {
+    color: #64d86b;
+    opacity: 0.5;
 }
 
 #left-form-col, #right-form-col {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    margin: 1rem;
+}
+
+#btn-submit {
+    width: 200px;
+    align-self: center;
     margin: 1rem;
 }
 
