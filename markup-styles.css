@@ -35,7 +35,7 @@ body::before {
     box-shadow: 2px 1px 5px 8px hsla(124, 60%, 62%, 0.7);
 }
 
-#about {
+#about, #good-luck {
     background: radial-gradient(circle, rgba(63,94,251,0.5) 4%, rgba(171,49,74,0.5) 80%);    
     text-align: center;
     font-size: 1.5rem;
@@ -99,18 +99,28 @@ button:active {
 #odin-form {
     color: #64d86b;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10rem;
     font-size: 1.5rem;
 }
 
+input:focus {
+    border: 1px solid green;
+    box-shadow: 1px -1.5px 10px 2px hsla(124, 100%, 63%, 0.7);
+    outline: none;
+}
 
 input {
     padding: 10px;
     background-color: transparent;
     border-radius: 50px;
-    width: 500px;
+    width: 100%;
+    min-width: 200px;
+    max-width: 1000px;
     color: #64d86b;
+    border-color: hsla(124, 60%, 62%, 0.7);
+    box-shadow: 1px -1.5px 5px 2px hsla(124, 60%, 62%, 0.7);
 }
 
 input::placeholder {
