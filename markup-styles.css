@@ -65,6 +65,17 @@ button {
     color:#64d86b;
     border: 1px solid #64d86b;
     box-shadow: 1px -1.5px 10px 2px hsla(124, 60%, 62%, 0.7);
+    transition: all 0.2s ease-in-out;
+}
+
+
+button:hover {
+    box-shadow: 1px -1.5px 25px 2px hsla(124, 60%, 62%, 0.7);
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(0.9);
 }
 
 #form-container {
