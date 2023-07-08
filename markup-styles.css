@@ -105,6 +105,11 @@ button:active {
     font-size: 1.5rem;
 }
 
+label span {
+    position: relative;
+    top: -8px;
+}
+
 input:focus {
     border: 1px solid green;
     box-shadow: 1px -1.5px 10px 2px hsla(124, 100%, 63%, 0.7);
