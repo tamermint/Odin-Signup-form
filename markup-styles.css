@@ -105,7 +105,7 @@ button:active {
     font-size: 1.5rem;
 }
 
-label span {
+label span {                       /*to make the asterisk align towards the top of text*/
     position: relative;
     top: -8px;
 }
