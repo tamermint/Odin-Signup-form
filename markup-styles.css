@@ -43,6 +43,21 @@ body::before {
     opacity: 0;
 }
 
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: scale(1, 0);
+        visibility: hidden;
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1, 1);
+      }
+}
+
+#about {
+    animation: slideIn 4s 0.2s forwards;
+}
 
 #about, #good-luck {
     background: radial-gradient(circle, rgba(63,94,251,0.5) 4%, rgba(171,49,74,0.5) 80%);    
