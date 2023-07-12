@@ -10,6 +10,7 @@ const logo = document.querySelector('#logo');
 const about = document.querySelector('#about-container');
 const goodLuck = document.querySelector('#good-luck');
 const formContainer = document.querySelector('#form-container');
+const userOptionBtn = document.querySelectorAll('#about-btn');
 
 
 function defaultView () {                        //giving a blank slate to work with - so we can manipulate
@@ -22,15 +23,23 @@ function logoEntry() {                           //this function is for slowly m
     defaultBody.appendChild(logo);               //will enter the screen as if it's being typed in
 }
 
-function aboutEntry() {
+function aboutEntry() {                         //function to add in the #about to the body
     let defaultBody = document.body;
     defaultBody.appendChild(about);
 }
+
+Array.from(userOptionBtn).forEach(btn => btn.addEventListener('onclick', formLogic));
+
+function formLogic() {
+    
+}
+
 
 window.onload = function() {
     defaultView();
     logoEntry();
     aboutEntry();
+    formLogic();
 }
 
 
