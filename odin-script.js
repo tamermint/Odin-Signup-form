@@ -18,15 +18,19 @@ function defaultView () {                        //giving a blank slate to work 
 }
 
 function logoEntry() {                           //this function is for slowly making the #logo div background appear and then textContent 
-                             //will enter the screen as if it's being typed in
-    
-    const logoText = logo.textContent.split('');
-   
-    
+    let defaultBody = document.body;
+    defaultBody.appendChild(logo);               //will enter the screen as if it's being typed in
+}
+
+function aboutEntry() {
+    let defaultBody = document.body;
+    defaultBody.appendChild(about);
 }
 
 window.onload = function() {
+    defaultView();
     logoEntry();
+    aboutEntry();
 }
 
 
