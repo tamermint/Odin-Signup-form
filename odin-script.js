@@ -10,7 +10,7 @@ const logo = document.querySelector('#logo');
 const about = document.querySelector('#about-container');
 const goodLuck = document.querySelector('#good-luck');
 const formContainer = document.querySelector('#form-container');
-const userOptionBtn = document.querySelectorAll('#about-btn');
+const userOptionBtn = document.querySelectorAll('.about-btn');
 
 
 function defaultView () {                        //giving a blank slate to work with - so we can manipulate
@@ -28,18 +28,26 @@ function aboutEntry() {                         //function to add in the #about 
     defaultBody.appendChild(about);
 }
 
-Array.from(userOptionBtn).forEach(btn => btn.addEventListener('onclick', formLogic));
+Array.from(userOptionBtn).forEach(btn => btn.addEventListener('click', function () {
+    if (btn.textContent === "NO") {
+        let defaultBody = document.body;
+        about.style.display = 'none';
+        defaultBody.appendChild(goodLuck);
+        
+    }
+    else {
+        let defaultBody = document.body;
+        about.style.display = 'none';
+        defaultBody.appendChild(formContainer);
+    }
+}));
 
-function formLogic() {
-    
-}
 
 
 window.onload = function() {
     defaultView();
     logoEntry();
     aboutEntry();
-    formLogic();
 }
 
 
