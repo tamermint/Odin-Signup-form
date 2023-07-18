@@ -20,9 +20,9 @@ function defaultView () {                        //giving a blank slate to work 
     defaultBody.innerHTML = '';
 }
 
-/* function playMusic() {
+function playMusic() {
     document.body.appendChild(audio);
-} */
+}
 
 function logoEntry() {                           //this function is for slowly making the #logo div background appear and then textContent 
     let defaultBody = document.body;
@@ -48,18 +48,42 @@ function aboutEntry() {                         //function to add in the #about 
     defaultBody.appendChild(about);
 }
 
-function userOptionLogic () {
-    Array.from(userOptionBtn).forEach(btn => btn.addEventListener('click', function () {
+function userOptionLogic () {                   //when user selects "YES" or "NO", then the about will slowly fade away and then the 
+    Array.from(userOptionBtn).forEach(btn => btn.addEventListener('click', function () {       //appropriate container will be appended
+        let defaultBody = document.body;
         if (btn.textContent === "NO") {
-            let defaultBody = document.body;
-            about.style.display = 'none';
-            defaultBody.appendChild(goodLuck);
-            
+            about.style.animationName = 'fadeAway';
+            about.style.animationTimingFunction = 'ease';
+            about.style.animationDelay = '0.5s';
+            about.style.animationDuration = '0.5s';
+            about.addEventListener('animationend', function () {
+                goodLuck.style.animationName = 'fadeIn';
+                goodLuck.style.animationTimingFunction = 'ease';
+                goodLuck.style.animationDelay = '0s';
+                goodLuck.style.animationDuration = '2s';
+                /* goodLuck.addEventListener('animationend', function (){
+                    goodLuck.style.animationName = '';
+                }, {once: true}) */
+                defaultBody.appendChild(goodLuck); //attached the above animations and then finally append the element
+                about.style.display = 'none';     //hides about container so that it is removed from DOM
+            }, {once: true});
         }
         else {
-            let defaultBody = document.body;
-            about.style.display = 'none';
-            defaultBody.appendChild(formContainer);
+            about.style.animationName = 'fadeAway';
+            about.style.animationTimingFunction = 'ease';
+            about.style.animationDelay = '0.5s';
+            about.style.animationDuration = '0.5s';
+            about.addEventListener('animationend', function () {
+                formContainer.style.animationName = 'fadeIn';
+                formContainer.style.animationTimingFunction = 'ease';
+                formContainer.style.animationDelay = '0s';
+                formContainer.style.animationDuration = '2s';
+                /* formContainer.addEventListener('animationend', function (){      //same thing as above
+                    formContainer.style.animationName = '';
+                }, {once: true}) */
+                defaultBody.appendChild(formContainer);
+                about.style.display = 'none';
+            }, {once: true});
         }
     }));
 }

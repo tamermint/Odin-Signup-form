@@ -72,6 +72,11 @@ body::before {
     border-radius: 20px;
 }
 
+@keyframes fadeAway {
+   from {opacity: 1; }
+   to {opacity: 0; }
+}
+
 #user-options {
     display: flex;
     justify-content: center;
