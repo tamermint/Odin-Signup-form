@@ -61,9 +61,9 @@ function userOptionLogic () {                   //when user selects "YES" or "NO
                 goodLuck.style.animationTimingFunction = 'ease';
                 goodLuck.style.animationDelay = '0s';
                 goodLuck.style.animationDuration = '2s';
-                /* goodLuck.addEventListener('animationend', function (){
+                 goodLuck.addEventListener('animationend', function (){
                     goodLuck.style.animationName = '';
-                }, {once: true}) */
+                }, {once: true});
                 defaultBody.appendChild(goodLuck); //attached the above animations and then finally append the element
                 about.style.display = 'none';     //hides about container so that it is removed from DOM
             }, {once: true});
@@ -78,9 +78,9 @@ function userOptionLogic () {                   //when user selects "YES" or "NO
                 formContainer.style.animationTimingFunction = 'ease';
                 formContainer.style.animationDelay = '0s';
                 formContainer.style.animationDuration = '2s';
-                /* formContainer.addEventListener('animationend', function (){      //same thing as above
+                formContainer.addEventListener('animationend', function (){      //same thing as above
                     formContainer.style.animationName = '';
-                }, {once: true}) */
+                }, {once: true});
                 defaultBody.appendChild(formContainer);
                 about.style.display = 'none';
             }, {once: true});
