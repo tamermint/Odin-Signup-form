@@ -29,7 +29,7 @@
         wish to be a part of the ground force
     </div>
     <div id="form-container">
-        <div id="form-intro">Welcome, you have made a bold choice. Enter your details to get started</div>
+        <div id="form-intro">Welcome, you have made a bold choice! Enter your details to get started</div>
         <form id="odin-form" method="post">
             <div id="left-form-col">
                 <label for="first_name"><span>&#10033;</span>First Name:</label>
@@ -43,13 +43,13 @@
             </div>
             <div id="right-form-col">
                 <label for="uplink"><span>&#10033;</span>Uplink:</label>
-                <input type="number" id="uplink" name="uplink" placeholder="Your sat phone" required>
+                <input type="text" id="uplink" name="uplink" placeholder="Your 10-digit sat phone" required>
                 <label for="downlink"><span>&#10033;</span>Downlink:</label>
                 <input type="email" id="downlink" name="downlink" placeholder="your interdimensional email" required>
                 <label for="pass"><span>&#10033;</span>Password:</label>
-                <input type="password" id="pass" name="pass" required>
+                <input type="password" id="pass" name="pass" required minlength="8" maxlength="16" placeholder="8 - 16 characters only">
                 <label for="pass_try"><span>&#10033;</span>Re-enter Password:</label>
-                <input type="password" id="pass_try" name="pass_try" required>
+                <input type="password" id="pass_try" name="pass_try" required minlength="8" maxlength="16">
             </div>
         </form>
         <button id="btn-submit" type="submit" form="odin-form">SUBMIT</button>
