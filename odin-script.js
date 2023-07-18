@@ -65,6 +65,8 @@ window.onload = function() {
     logoEntry();
     aboutEntry();
     userOptionLogic();
+    const audio = document.getElementById('page-audio');
+    audio.play();
 }
 
 
