@@ -12,12 +12,14 @@ const goodLuck = document.querySelector('#good-luck');
 const formContainer = document.querySelector('#form-container');
 const userOptionBtn = document.querySelectorAll('.about-btn');
 const audio = document.querySelector('#page-audio');
+const footer = document.querySelector('#footer');
 
 
 
 function defaultView () {                        //giving a blank slate to work with - so we can manipulate
     let defaultBody = document.body;
     defaultBody.innerHTML = '';
+    defaultBody.appendChild(footer);
 }
 
 function playMusic() {

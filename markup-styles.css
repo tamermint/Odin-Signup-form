@@ -179,16 +179,25 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    position: relative;
+    position: fixed;
     text-align: center;
     background: radial-gradient(circle, rgba(63,94,251,0.2) 4%, rgba(171,49,74,0.2) 80%);
 }
 
 #bground-img-credits:visited {
     text-decoration: none;
-    color: black;
+    color: #64d86b;
 }
 
 #bground-img-credits {
+    text-decoration: none;
+}
+
+#bground-music-credits:visited {
+    text-decoration: none;
+    color: #64d86b;
+}
+
+#bground-music-credits {
     text-decoration: none;
 }
