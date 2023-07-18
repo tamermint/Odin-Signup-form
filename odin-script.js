@@ -20,7 +20,24 @@ function defaultView () {                        //giving a blank slate to work 
 
 function logoEntry() {                           //this function is for slowly making the #logo div background appear and then textContent 
     let defaultBody = document.body;
-    defaultBody.appendChild(logo);               //will enter the screen as if it's being typed in
+    const logoText = logo.innerText;
+    logo.innerText = '';
+    defaultBody.appendChild(logo);
+    const logoTextArr = logoText.split('');
+    console.log(logoTextArr);
+    let i = 0;
+
+    let delay = setInterval(function() {
+        if(i < logoTextArr.length) {
+            logo.textContent += logoTextArr[i++];
+            console.log(logoTextArr[i]);
+        }
+        else {
+            clearInterval(delay);
+        }
+    }, 200)
+                                                   //will enter the screen as if it's being typed in
+    
 }
 
 function aboutEntry() {                         //function to add in the #about to the body
@@ -28,26 +45,28 @@ function aboutEntry() {                         //function to add in the #about 
     defaultBody.appendChild(about);
 }
 
-Array.from(userOptionBtn).forEach(btn => btn.addEventListener('click', function () {
-    if (btn.textContent === "NO") {
-        let defaultBody = document.body;
-        about.style.display = 'none';
-        defaultBody.appendChild(goodLuck);
-        
-    }
-    else {
-        let defaultBody = document.body;
-        about.style.display = 'none';
-        defaultBody.appendChild(formContainer);
-    }
-}));
-
+function userOptionLogic () {
+    Array.from(userOptionBtn).forEach(btn => btn.addEventListener('click', function () {
+        if (btn.textContent === "NO") {
+            let defaultBody = document.body;
+            about.style.display = 'none';
+            defaultBody.appendChild(goodLuck);
+            
+        }
+        else {
+            let defaultBody = document.body;
+            about.style.display = 'none';
+            defaultBody.appendChild(formContainer);
+        }
+    }));
+}
 
 
 window.onload = function() {
     defaultView();
     logoEntry();
     aboutEntry();
+    userOptionLogic();
 }
 
 
