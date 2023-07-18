@@ -27,7 +27,7 @@ function logoEntry() {                           //this function is for slowly m
     console.log(logoTextArr);
     let i = 0;
 
-    let delay = setInterval(function() {
+    let delay = setInterval(function() {          //will enter the screen as if it's being typed in
         if(i < logoTextArr.length) {
             logo.textContent += logoTextArr[i++];
             console.log(logoTextArr[i]);
@@ -35,9 +35,7 @@ function logoEntry() {                           //this function is for slowly m
         else {
             clearInterval(delay);
         }
-    }, 200)
-                                                   //will enter the screen as if it's being typed in
-    
+    }, 200)     
 }
 
 function aboutEntry() {                         //function to add in the #about to the body
