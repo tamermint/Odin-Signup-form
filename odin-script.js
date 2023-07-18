@@ -11,6 +11,8 @@ const about = document.querySelector('#about-container');
 const goodLuck = document.querySelector('#good-luck');
 const formContainer = document.querySelector('#form-container');
 const userOptionBtn = document.querySelectorAll('.about-btn');
+const audio = document.querySelector('#page-audio');
+
 
 
 function defaultView () {                        //giving a blank slate to work with - so we can manipulate
@@ -18,19 +20,22 @@ function defaultView () {                        //giving a blank slate to work 
     defaultBody.innerHTML = '';
 }
 
+/* function playMusic() {
+    document.body.appendChild(audio);
+} */
+
 function logoEntry() {                           //this function is for slowly making the #logo div background appear and then textContent 
     let defaultBody = document.body;
     const logoText = logo.innerText;
     logo.innerText = '';
     defaultBody.appendChild(logo);
     const logoTextArr = logoText.split('');
-    console.log(logoTextArr);
     let i = 0;
 
     let delay = setInterval(function() {          //will enter the screen as if it's being typed in
         if(i < logoTextArr.length) {
             logo.textContent += logoTextArr[i++];
-            console.log(logoTextArr[i]);
+            
         }
         else {
             clearInterval(delay);
@@ -62,11 +67,10 @@ function userOptionLogic () {
 
 window.onload = function() {
     defaultView();
+    /* playMusic(); */
     logoEntry();
     aboutEntry();
     userOptionLogic();
-    const audio = document.getElementById('page-audio');
-    audio.play();
 }
 
 
