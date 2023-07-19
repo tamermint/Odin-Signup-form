@@ -23,10 +23,10 @@ function defaultView () {                        //giving a blank slate to work 
 }
 
 function playMusic() {
-    document.body.appendChild(audio);
-}
+    /* document.body.appendChild(audio); */
+} 
 
-function logoEntry() {                           //this function is for slowly making the #logo div background appear and then textContent 
+function logoEntry() {                            //this function is for slowly making the #logo div background appear and then textContent 
     let defaultBody = document.body;
     const logoText = logo.innerText;
     logo.innerText = '';
@@ -36,8 +36,7 @@ function logoEntry() {                           //this function is for slowly m
 
     let delay = setInterval(function() {          //will enter the screen as if it's being typed in
         if(i < logoTextArr.length) {
-            logo.textContent += logoTextArr[i++];
-            
+            logo.textContent += logoTextArr[i++];   
         }
         else {
             clearInterval(delay);
@@ -45,12 +44,13 @@ function logoEntry() {                           //this function is for slowly m
     }, 200)     
 }
 
-function aboutEntry() {                         //function to add in the #about to the body
+function aboutEntry() {                           //function to add in the #about to the body
     let defaultBody = document.body;
     defaultBody.appendChild(about);
+    /* document.body.appendChild(audio); */
 }
 
-function userOptionLogic () {                   //when user selects "YES" or "NO", then the about will slowly fade away and then the 
+function userOptionLogic () {                                                                  //when user selects "YES" or "NO", then the about will slowly fade away and then the 
     Array.from(userOptionBtn).forEach(btn => btn.addEventListener('click', function () {       //appropriate container will be appended
         let defaultBody = document.body;
         if (btn.textContent === "NO") {
@@ -90,13 +90,21 @@ function userOptionLogic () {                   //when user selects "YES" or "NO
     }));
 }
 
+function passwordChecker() {
+    const pass = document.querySelector('#pass');
+    const repass = document.querySelector('#pass_try');
+    console.log(pass.value);
+    console.log(repass.value);
+}
+
 
 window.onload = function() {
     defaultView();
-    /* playMusic(); */
+    playMusic();
     logoEntry();
     aboutEntry();
     userOptionLogic();
+    passwordChecker();
 }
 
 

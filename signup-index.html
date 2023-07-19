@@ -33,17 +33,17 @@
         <form id="odin-form" method="post">
             <div id="left-form-col">
                 <label for="first_name"><span>&#10033;</span>First Name:</label>
-                <input type="text" id="first_name" name="first_name" required>
+                <input type="text" id="first_name" name="first_name" required pattern="^[A-Z][a-z]{2,}$">
                 <label for="last_name"><span>&#10033;</span>Last Name:</label>
-                <input type="text" id="last_name" name="last_name" required>
+                <input type="text" id="last_name" name="last_name" required pattern="^[A-Z][a-z]{2,}$">
                 <label for="age">Age:</label>
                 <input type="number" id="lage" name="age" min="18" max="45">
                 <label for="alias"><span>&#10033;</span>Multiverse alias:</label>
-                <input type="text" id="alias" name="alias" required>
+                <input type="text" id="alias" name="alias" required pattern="\w{5,8}$" placeholder="alphanumeric, _ and between 5 - 8 chars">
             </div>
             <div id="right-form-col">
                 <label for="uplink"><span>&#10033;</span>Uplink:</label>
-                <input type="text" id="uplink" name="uplink" placeholder="Your 10-digit sat phone" required>
+                <input type="text" id="uplink" name="uplink" placeholder="Your 10-digit sat phone" required pattern="^\d-\d{9}$">
                 <label for="downlink"><span>&#10033;</span>Downlink:</label>
                 <input type="email" id="downlink" name="downlink" placeholder="your interdimensional email" required>
                 <label for="pass"><span>&#10033;</span>Password:</label>
