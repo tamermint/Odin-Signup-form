@@ -24,7 +24,7 @@ function defaultView () {                        //giving a blank slate to work 
 }
 
 function playMusic() {
-     /* document.body.appendChild(audio); */
+    document.body.appendChild(audio);
 } 
 
 function logoEntry() {                            //this function is for slowly making the #logo div background appear and then textContent 
