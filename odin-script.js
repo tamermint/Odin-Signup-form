@@ -48,7 +48,7 @@ function logoEntry() {                            //this function is for slowly 
 function aboutEntry() {                           //function to add in the #about to the body
     let defaultBody = document.body;
     defaultBody.appendChild(about);
-    /* document.body.appendChild(audio); */
+    document.body.appendChild(audio);
 }
 
 function userOptionLogic () {                                                                  //when user selects "YES" or "NO", then the about will slowly fade away and then the 
